@@ -39,7 +39,11 @@ p{
 	height: 120px;
 }
 
-p, .stopka{
+form{
+	flex-direction: column;
+}
+
+p, .stopka, form{
 	animation-name: tekst;
 	animation-duration: 1.5s;
 	display: flex;
