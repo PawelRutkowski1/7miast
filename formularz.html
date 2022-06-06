@@ -1,0 +1,70 @@
+<!Doctype html>
+<html lang = "pl">
+	<head>
+		<title>7 największych miast świata</title>
+		<link rel = "stylesheet" type = "text/css" href = "style.css">
+		<link rel="icon" href="ikona.png">
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<script src = "formularz.js"></script>
+		<script>
+		//Wzięte stąd: https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp
+		/* Open when someone clicks on the span element */
+			function openNav() {
+				document.getElementById("myNav").style.width = "100%";
+			}
+			
+			/* Close when someone clicks on the "x" symbol inside the overlay */
+			function closeNav() {
+				document.getElementById("myNav").style.width = "0%";
+			}
+		</script>
+	</head>
+	<body>
+		<!--Wzięte stąd: https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp-->
+		<!-- The overlay -->
+		
+		<div id="myNav" class="overlay">
+			
+			<!-- Button to close the overlay navigation -->
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			
+			<!-- Overlay content -->
+			<div class="overlay-content">
+				<div id = "miasta">
+					<a href="tokio.html">Tokio</a>
+					<a href="delhi.html">Delhi</a>
+					<a href="szanghaj.html">Szanghaj</a>
+					<a href="saopaulo.html">Sao Paulo</a>
+					<a href="meksyk.html">Meksyk</a>
+					<a href="kair.html">Kair</a>
+					<a href="mumbaj.html">Mumbaj</a>
+				</div>
+				<a href = "index.html">Strona główna</a>
+				<a href = "formularz.html">Formularz</a>
+				<a href = "galeria.html">Galeria</a>
+			</div>
+
+		</div>
+
+		<!-- Use any element to open/show the overlay navigation menu -->
+		<div onclick="openNav()" style = "position: fixed; font-size: 5vw;"><b>&#8801;</b></div>
+		
+		<h1>Formularz</h1>
+		<div class = "lista">
+			<p>Zmień kolor:</p>
+			<form action = "">
+				<label><input type = "radio" name = "kolor" id = "formularz" checked>Tego formularza</label>
+				<br>
+				<label><input type = "radio" name = "kolor" id = "stopka">Stopki</label>
+				<br>
+				<label>Na taki:&#160;<input type = "color" id = "kolor"></label>
+				<br>
+				<input type = "button" onclick = "zmienkolor()" value = "Zmień kolor">
+				<br>
+			</form>
+		</div>
+		<br>
+		<div class = "stopka">Strona o miastach, wykonał Paweł Rutkowski, 2022. Ikona na zakładce pochodzi&#160;<a href="https://www.flaticon.com/free-icons/world" title="world icons" target = "_blank">stąd</a>&#160;(nowa karta)</div>
+	</body>
+</html>
