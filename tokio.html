@@ -3,7 +3,7 @@
 	<head>
 		<title>7 największych miast świata</title>
 		<link rel = "stylesheet" type = "text/css" href = "style.css">
-		<link rel="icon" href="ikona.png">
+		<link rel="icon" href="zdjecia\ikona.png">
 		<meta charset = "utf-8">
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 		<script>
@@ -32,12 +32,12 @@
 			<div class="overlay-content">
 				<div id = "miasta">
 					<a href="tokio.html">Tokio</a>
-					<a href="delhi.html">Delhi</a>
+					<a href="delhi.html">New Delhi</a>
 					<a href="szanghaj.html">Szanghaj</a>
 					<a href="saopaulo.html">Sao Paulo</a>
 					<a href="meksyk.html">Meksyk</a>
 					<a href="kair.html">Kair</a>
-					<a href="mumbaj.html">Mumbaj</a>
+					<a href="dhaka.html">Dhaka</a>
 				</div>
 				<a href = "index.html">Strona główna</a>
 				<a href = "formularz.html">Formularz</a>
@@ -47,12 +47,44 @@
 		</div>
 
 		<!-- Use any element to open/show the overlay navigation menu -->
-		<div onclick="openNav()" style = "position: fixed; font-size: 5vw;"><b>&#8801;</b></div>
+		<div onclick="openNav()" style = "position: fixed; font-size: 5vw;" id = "openOverlay"><b>&#8801;</b></div>
+		
+		<!-- Wzięte stąd: https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+		<div class = "navbar">
+			<div class="dropdown">
+				<button class = "dropbtn">Miasta &#9660;</button>
+				<div class = "dropdown-content">
+					<a href="tokio.html">Tokio</a>
+					<a href="delhi.html">New Delhi</a>
+					<a href="szanghaj.html">Szanghaj</a>
+					<a href="saopaulo.html">Sao Paulo</a>
+					<a href="meksyk.html">Meksyk</a>
+					<a href="kair.html">Kair</a>
+					<a href="dhaka.html">Dhaka</a>
+				</div>
+			</div>
+			<a href = "index.html">Strona główna</a>
+			<a href = "formularz.html">Formularz</a>
+			<a href = "galeria.html">Galeria</a>
+		</div>
+		
+		<div class = "szerokipasek">
+			<a href="tokio.html">Tokio</a>
+			<a href="delhi.html">New Delhi</a>
+			<a href="szanghaj.html">Szanghaj</a>
+			<a href="saopaulo.html">Sao Paulo</a>
+			<a href="meksyk.html">Meksyk</a>
+			<a href="kair.html">Kair</a>
+			<a href="dhaka.html">Dhaka</a>
+			<a href = "index.html">Strona główna</a>
+			<a href = "formularz.html">Formularz</a>
+			<a href = "galeria.html">Galeria</a>
+		</div>
 		
 		<h1>Tokio - stolica Japonii</h1>
 		<div class = "lista">
-			<img src = "tokio.jpg"></img>
-			<p>tokio</p>
+			<img src = "zdjecia\tokio.jpg" alt = "tokio">
+			<p>Największym miastem na świecie jest Tokio, stolica Japonii. Mieszka tam około 25% populacji tego kraju. Eksperci przewidują, że z powodu starzenia się społeczeństwa Japonii, liczba ludności Tokio będzie spadać.</p>
 		</div>
 		<div class = "stopka">Strona o miastach, wykonał Paweł Rutkowski, 2022. Ikona na zakładce pochodzi&#160;<a href="https://www.flaticon.com/free-icons/world" title="world icons" target = "_blank">stąd</a>&#160;(nowa karta)</div>
 	</body>

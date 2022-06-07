@@ -1,5 +1,5 @@
 body{
-	background-image: url('tlo2.png');
+	background-image: url('zdjecia/tlo2.png');
 	background-attachment: fixed;
 }
 
@@ -30,13 +30,32 @@ h1:hover{
 	to{margin-left: 10%; margin-right: 10%}
 }
 
+@keyframes zdjecie{
+	from{margin-left: auto; margin-right: auto}
+	to{margin-left: auto; margin-right: auto}
+}
+
 @keyframes tekst{
 	from{opacity: 0%;}
 	to{opacity: 100%;}
 }
 
+.galeria{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 5px;
+	justify-items: stretch;
+	align-items: stretch;
+}
+
+#zdjecie{
+	margin: auto;
+	border-radius: 10px;
+}
+
 p{
 	height: 120px;
+	text-align: center;
 }
 
 form{
@@ -68,6 +87,91 @@ p, .stopka, form{
 .tokio{
 	
 }
+/* Wzięte stąd: https://www.w3schools.com/howto/howto_css_dropdown.asp */
+.navbar {
+	overflow: hidden;
+	background-color: #333;
+	animation-name: lista;
+	animation-duration: 1.5s;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-radius: 10px;
+}
+
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-size: 16px;	
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: red;
+}
+
+.dropdown-content {
+	border-radius: 10px;
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.szerokipasek{
+	overflow: hidden;
+	background-color: #333;
+	animation-name: lista;
+	animation-duration: 1.5s;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-radius: 10px;
+}
+
+.szerokipasek a{
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;	
+}
 
 #miasta{
 	border: 2px dashed grey;
@@ -92,58 +196,82 @@ img{
 
 /*Wzięte stąd: https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp*/
 /* The Overlay (background) */
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-  height: 100%;
-  width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+.overlay{
+	/* Height & width depends on how you want to reveal the overlay (see JS below) */	 
+	height: 100%;
+	width: 0;
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	background-color: rgb(0,0,0); /* Black fallback color */
+	background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+	overflow-x: hidden; /* Disable horizontal scroll */
+	transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
 /* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-   /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 90px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+.overlay-content{
+	position: relative;
+	/* 25% from the top */
+	width: 100%; /* 100% width */
+	text-align: center; /* Centered text/links */
+	margin-top: 90px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
 /* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+.overlay a{
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	display: block; /* Display block instead of inline */
+	transition: 0.3s; /* Transition effects on hover (color) */
 }
 
 /* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+.overlay a:hover, .overlay a:focus{
+	color: #f1f1f1;
 }
 
 /* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+.overlay .closebtn{
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+@media screen and (max-height: 450px){
+	.overlay a {font-size: 20px}
+	.overlay .closebtn{
+	font-size: 40px;
+	top: 15px;
+	right: 35px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.navbar{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 601px){
+	#openOverlay{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	.szerokipasek{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1201px){
+	.navbar{
+		display: none;
+	}
 }

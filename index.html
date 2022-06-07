@@ -3,7 +3,7 @@
 	<head>
 		<title>7 największych miast świata</title>
 		<link rel = "stylesheet" type = "text/css" href = "style.css">
-		<link rel="icon" href="ikona.png">
+		<link rel="icon" href="zdjecia\ikona.png">
 		<meta charset = "utf-8">
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 		<script>
@@ -32,12 +32,12 @@
 			<div class="overlay-content">
 				<div id = "miasta">
 					<a href="tokio.html">Tokio</a>
-					<a href="delhi.html">Delhi</a>
+					<a href="delhi.html">New Delhi</a>
 					<a href="szanghaj.html">Szanghaj</a>
 					<a href="saopaulo.html">Sao Paulo</a>
 					<a href="meksyk.html">Meksyk</a>
 					<a href="kair.html">Kair</a>
-					<a href="mumbaj.html">Mumbaj</a>
+					<a href="dhaka.html">Dhaka</a>
 				</div>
 				<a href = "index.html">Strona główna</a>
 				<a href = "formularz.html">Formularz</a>
@@ -47,17 +47,49 @@
 		</div>
 
 		<!-- Use any element to open/show the overlay navigation menu -->
-		<div onclick="openNav()" style = "position: fixed; font-size: 5vw;"><b>&#8801;</b></div>
+		<div onclick="openNav()" style = "position: fixed; font-size: 5vw;" id = "openOverlay"><b>&#8801;</b></div>
+		
+		<!-- Wzięte stąd: https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+		<div class = "navbar">
+			<div class="dropdown">
+				<button class = "dropbtn">Miasta &#9660;</button>
+				<div class = "dropdown-content">
+					<a href="tokio.html">Tokio</a>
+					<a href="delhi.html">New Delhi</a>
+					<a href="szanghaj.html">Szanghaj</a>
+					<a href="saopaulo.html">Sao Paulo</a>
+					<a href="meksyk.html">Meksyk</a>
+					<a href="kair.html">Kair</a>
+					<a href="dhaka.html">Dhaka</a>
+				</div>
+			</div>
+			<a href = "index.html">Strona główna</a>
+			<a href = "formularz.html">Formularz</a>
+			<a href = "galeria.html">Galeria</a>
+		</div>
+		
+		<div class = "szerokipasek">
+			<a href="tokio.html">Tokio</a>
+			<a href="delhi.html">New Delhi</a>
+			<a href="szanghaj.html">Szanghaj</a>
+			<a href="saopaulo.html">Sao Paulo</a>
+			<a href="meksyk.html">Meksyk</a>
+			<a href="kair.html">Kair</a>
+			<a href="dhaka.html">Dhaka</a>
+			<a href = "index.html">Strona główna</a>
+			<a href = "formularz.html">Formularz</a>
+			<a href = "galeria.html">Galeria</a>
+		</div>
 		
 		<h1>7 największych miast na świecie</h1>
 		<div class = "lista">
-			<p class = "tokio">1. Tokio</p>
-			<p class = "delhi">2. Delhi</p>
-			<p class = "szanghaj">3. Szanghaj</p>
-			<p class = "saopaulo">4. Sao Paulo</p>
-			<p class = "meksyk">5. Meksyk</p>
-			<p class = "kair">6. Kair</p>
-			<p class = "mumbaj">7. Mumbaj</p>
+			<p class = "tokio">1. Tokio - 37 435 191 mieszkańców</p>
+			<p class = "delhi">2. New Delhi - 29 399 141 mieszkańców</p>
+			<p class = "szanghaj">3. Szanghaj - 26 317 104 mieszkańców</p>
+			<p class = "saopaulo">4. Sao Paulo - 21 846 507 mieszkańców</p>
+			<p class = "meksyk">5. Meksyk - 21 671 908 mieszkańców</p>
+			<p class = "kair">6. Kair - 20 484 965 mieszkańców</p>
+			<p class = "dhaka">7. Dhaka - 20 283 552 mieszkańców</p>
 		</div>
 		<div class = "stopka">Strona o miastach, wykonał Paweł Rutkowski, 2022. Ikona na zakładce pochodzi&#160;<a href="https://www.flaticon.com/free-icons/world" title="world icons" target = "_blank">stąd</a>&#160;(nowa karta)</div>
 	</body>
